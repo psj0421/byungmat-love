@@ -222,6 +222,13 @@ class TestBatchFiles(unittest.TestCase):
     def test_Python이_없으면_설치_페이지_안내(self):
         self.assertIn(b"python.org", read_project_file("run.bat"))
 
+    def test_빌드하면_release_폴더에_exe를_넣음(self):
+        # GitHub에서 exe를 바로 받을 수 있게 release/byungmat_love.exe로 복사한다
+        data = read_project_file("build_exe.bat")
+        self.assertIn(b"copy /y dist\\byungmat_love.exe release\\byungmat_love.exe", data)
+        # 테스트 실행이 빌드보다 먼저 와야 한다 (테스트 실패하면 exe 안 만듦)
+        self.assertLess(data.index(b"unittest"), data.index(b"PyInstaller"))
+
     def test_run_bat만_따로_받으면_ZIP_받으라고_안내(self):
         # run.bat 하나만 다운받으면 옆에 게임 파일이 없어서 조용히 아무 일도 안 일어났다
         data = read_project_file("run.bat")

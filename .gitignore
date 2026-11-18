@@ -7,5 +7,3 @@ build/
 dist/
 *.spec
 
-# exe는 백신(V3) 차단 문제로 저장소에 올리지 않음 (run.bat로 실행)
-release/

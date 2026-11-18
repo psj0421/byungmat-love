@@ -6,7 +6,7 @@ Python tkinter로 만든 **웃긴 게 1순위**인 선택형 연애 시뮬레이
 
 ![Python](https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white)
 ![GUI](https://img.shields.io/badge/GUI-tkinter-ff85a2)
-![Tests](https://img.shields.io/badge/tests-38%20passed-brightgreen)
+![Tests](https://img.shields.io/badge/tests-39%20passed-brightgreen)
 ![Platform](https://img.shields.io/badge/platform-Windows-0078D6?logo=windows&logoColor=white)
 
 - **제출자**: AI융합소프트웨어과 1학년 박성재
@@ -19,36 +19,43 @@ Python tkinter로 만든 **웃긴 게 1순위**인 선택형 연애 시뮬레이
 |:---:|---|---|
 | 📄 **기획서** | [`docs/기획서.md`](docs/기획서.md) | 기획 의도, 재미 요소, 캐릭터, 챕터 구성, 엔딩 규칙, 기술 구성 |
 | 💻 **소스 코드** | [`byungmat_love.py`](byungmat_love.py) | 게임 본체 (외부 라이브러리 없음) |
-| 🧪 **테스트 코드** | [`test_byungmat.py`](test_byungmat.py) | 자동 테스트 38개 (전부 통과) |
-| ▶️ **실행 파일** | [`run.bat`](run.bat) | 더블클릭하면 게임 실행 (Python 필요, 백신에 막히지 않음) |
+| 🧪 **테스트 코드** | [`test_byungmat.py`](test_byungmat.py) | 자동 테스트 39개 (전부 통과) |
+| 🎮 **실행파일 (exe)** | [`release/byungmat_love.exe`](release/byungmat_love.exe) | Windows용, 설치 없이 더블클릭으로 실행 |
+| ▶️ **실행 스크립트** | [`run.bat`](run.bat) | exe가 백신에 막힐 때: Python으로 같은 게임 실행 |
 
 ---
 
 ## 👀 1분 확인 가이드
 
-**① 게임 실행하기 (더블클릭)**
-1. **Python 3 설치** (이미 있으면 건너뛰기): [python.org/downloads](https://www.python.org/downloads/)에서 받아 설치
+**① 실행파일(exe)로 바로 해보기** (Python 없어도 됨)
+1. [`release/byungmat_love.exe`](release/byungmat_love.exe) 클릭 → 오른쪽 위 **다운로드(⬇) 버튼**
+2. 받은 파일 더블클릭 → 게임 창이 뜨면 끝 🎮
+   > "Windows의 PC 보호" 창이 뜨면 **추가 정보 → 실행**을 누르세요.
+   >
+   > **"액세스할 수 없습니다 / 액세스가 거부되었습니다"** 가 뜨면 백신(안랩 V3 등)이 막은 거예요 → **② 방법**으로 실행해 주세요.
+
+**② exe가 막힐 때: `run.bat`으로 실행하기** (Python 필요)
+1. **Python 3 설치** (이미 있으면 건너뛰기): [python.org/downloads](https://www.python.org/downloads/)
    > 설치 첫 화면에서 **"Add python.exe to PATH"** 를 체크해 주세요.
 2. 이 페이지 위쪽 초록색 **`<> Code` 버튼 → `Download ZIP`** 으로 받아서 압축 풀기
-   > ⚠️ `run.bat` **하나만 따로 받으면 안 돼요.** 게임 본체(`byungmat_love.py`)가 옆에 있어야 실행돼요. 꼭 ZIP 전체를 받아 주세요.
-3. 압축 푼 폴더의 **`run.bat` 더블클릭** → 게임 창이 뜨면 끝 🎮
-   > "Windows의 PC 보호" 창이 뜨면 **추가 정보 → 실행**을 누르세요.
+   > ⚠️ `run.bat` **하나만 따로 받으면 안 돼요.** 게임 본체(`byungmat_love.py`)가 옆에 있어야 실행돼요.
+3. 압축 푼 폴더의 **`run.bat` 더블클릭**
    > Python이 없거나 게임 파일이 옆에 없으면 `run.bat`이 검은 창으로 무엇이 문제인지 알려 줘요.
 
-**② 명령어로 실행하기** (폴더에서 터미널을 열고)
+**③ 명령어로 실행하기** (폴더에서 터미널을 열고)
 ```bash
 python byungmat_love.py
 ```
 
-**③ 테스트 실행하기**
+**④ 테스트 실행하기**
 ```bash
 python -m unittest -v test_byungmat.py
 ```
-→ 마지막 줄에 `Ran 38 tests ... OK`가 나오면 전부 통과
+→ 마지막 줄에 `Ran 39 tests ... OK`가 나오면 전부 통과
 
-> **왜 exe가 아니라 run.bat인가요?**
-> 처음엔 PyInstaller로 만든 exe를 올렸는데, 코드 서명(유료 인증서)이 없는 exe는 **안랩 V3 같은 백신이 "액세스 거부"로 실행을 막는 문제**가 있었어요.
-> 그래서 공식 서명된 Python으로 소스 코드를 바로 실행하는 방식으로 바꿨습니다. 외부 라이브러리가 없어서 Python만 있으면 바로 돌아가요.
+> **exe가 왜 막히나요?**
+> 이 exe는 바이러스가 아니라 **코드 서명(유료 인증서)이 없는 개인 프로그램**이에요. 그래서 일부 백신이 "처음 보는 프로그램"으로 보고 실행을 막을 수 있어요.
+> 같은 게임을 공식 서명된 Python으로 실행하는 `run.bat`은 막히지 않아요. 소스 코드는 [`byungmat_love.py`](byungmat_love.py)에서 전부 확인할 수 있어요.
 
 ---
 
@@ -102,7 +109,7 @@ python -m unittest -v test_byungmat.py
 | `draw_face()`, `load_character_image()` | Canvas로 캐릭터 그리기 / `images/`의 PNG 불러오기 |
 | `LoveGame` | tkinter 화면 클래스 (시작 → 장면 → 반응 → 이벤트 → 엔딩) |
 
-**테스트 38개**가 확인하는 것: 조사 처리, 엔딩 경계값, 장면 데이터 형식, 난이도(랜덤 플레이 3000판에서 TRUE 엔딩 10% 미만), 돌발 이벤트, 캐릭터 그림, 7초 타이머, 모든 화면이 창 안에 들어가는지, `.bat` 파일 형식.
+**테스트 39개**가 확인하는 것: 조사 처리, 엔딩 경계값, 장면 데이터 형식, 난이도(랜덤 플레이 3000판에서 TRUE 엔딩 10% 미만), 돌발 이벤트, 캐릭터 그림, 7초 타이머, 모든 화면이 창 안에 들어가는지, `.bat` 파일 형식.
 
 ---
 
@@ -113,19 +120,20 @@ python -m unittest -v test_byungmat.py
 ├── 📄 docs/
 │   ├── 기획서.md            ← 기획서
 │   └── screenshots/         ← README용 게임 화면
-├── ▶️ run.bat               ← 더블클릭으로 게임 실행
+├── 🎮 release/
+│   └── byungmat_love.exe    ← 실행파일
+├── ▶️ run.bat               ← exe가 막힐 때 Python으로 실행
 ├── 💻 byungmat_love.py      ← 게임 소스 코드
 ├── 🧪 test_byungmat.py      ← 테스트 코드
 ├── 🖼️ images/               ← 캐릭터 PNG를 넣는 곳 (없으면 코드로 그린 그림 사용)
-├── 🛠️ build_exe.bat         ← (선택) 내 PC용 exe 만들기
+├── 🛠️ build_exe.bat         ← 테스트 → exe 빌드 → release/로 복사
 └── README.md
 ```
 
-## 🛠️ (선택) exe 직접 만들기
+## 🛠️ 실행파일 직접 만들기
 
 ```bash
 pip install pyinstaller
 build_exe.bat
 ```
-테스트 38개가 모두 통과할 때만 `dist/byungmat_love.exe`를 만듭니다.
-서명 없는 exe라 **다른 PC에서는 백신에 막힐 수 있어서** 저장소에는 올리지 않고, 내 PC에서만 쓰는 용도예요.
+**테스트 39개가 모두 통과할 때만** exe를 새로 만들어 `release/`에 넣어요. (테스트가 깨진 코드로 exe가 만들어지는 걸 막는 장치예요. 이미 올라가 있는 exe는 누구나 조건 없이 다운로드할 수 있어요.)
