@@ -11,6 +11,6 @@ if errorlevel 1 (
 )
 
 echo [2/2] Building exe...
-python -m PyInstaller --onefile --windowed --name byungmat_love --clean -y byungmat_love.py
+python -m PyInstaller --onefile --windowed --name byungmat_love --add-data "images;images" --clean -y byungmat_love.py
 if errorlevel 1 exit /b 1
 echo Done: dist\byungmat_love.exe
