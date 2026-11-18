@@ -26,6 +26,7 @@ Python tkinter 병맛 연애 시뮬레이션 (10챕터, 지옥 난이도, 7초 �
 - 이모지는 tkinter에서 흑백으로 보임 (Windows Tk 한계)
 - PhotoImage는 PNG만 읽음, JPG 안 됨. 그리고 변수에 잡아두지 않으면 그림이 사라짐(`self.art_image`)
 - 서명 안 된 exe라 SmartScreen 경고 → "추가 정보 → 실행"
+- 다운로드한 exe가 "액세스 거부"로 안 열림 → 안랩 V3 평판 기반 실행 차단으로 추정 (V3 MeD 로그에 기록, Defender/스마트 앱 컨트롤은 무관). README "🚫 실행이 막힐 때"에 대처법 정리. 근본 해결은 코드 서명뿐
 
 ## 관련 파일
 - `byungmat_love.py`, `test_byungmat.py`, `build_exe.bat`, `images/README.txt`, `docs/기획서.md`, `README.md`, `CLAUDE.md`
