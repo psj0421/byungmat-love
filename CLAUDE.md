@@ -17,7 +17,8 @@ python byungmat_love.py
 
 ## 현재 상태
 - ✅ 테스트 34개 통과 (`python -m unittest -v test_byungmat.py`): 조사, 엔딩 경계값, 장면 데이터, 난이도(랜덤 플레이 TRUE < 10%), 이벤트, 캐릭터 그림, 타이머, GUI 레이아웃
-- ✅ `build_exe.bat`로 `dist/byungmat_love.exe` 빌드 (`images/` 폴더 포함, 테스트 실패 시 빌드 안 함)
+- ✅ `build_exe.bat`로 exe 빌드 → `release/byungmat_love.exe`로 복사 (`images/` 포함, 테스트 실패 시 빌드 안 함). release/ 는 git에 커밋함
+- ✅ README는 교수님 제출용: 맨 위 "제출물 한눈에 보기" 표 + 1분 확인 가이드 + 스크린샷(`docs/screenshots/`)
 - 📄 기획서: `docs/기획서.md`, 인수인계: `HANDOFF.md`
 - ⏳ GitHub push 아직 안 함 (저장소 주소 받으면 진행)
 
