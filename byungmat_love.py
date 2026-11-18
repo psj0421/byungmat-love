@@ -18,7 +18,7 @@ import tkinter as tk
 START_SCORE = 10        # 시작 호감도 (예전엔 30이었음)
 TRUE_SCORE = 100        # TRUE 엔딩에 필요한 호감도
 PIGEON_GOAL = 4         # 비둘기 히든 엔딩에 필요한 비둘기 게이지
-TIME_LIMIT = 5          # 선택지 고르는 제한 시간(초)
+TIME_LIMIT = 7          # 선택지 고르는 제한 시간(초)
 TIMEOUT_PENALTY = -15   # 시간 초과 시 호감도 변화
 EVENT_CHANCE = 0.35     # 챕터가 끝날 때마다 돌발 이벤트가 터질 확률
 

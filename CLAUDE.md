@@ -16,7 +16,7 @@ python byungmat_love.py
 - 창 크기는 640x680으로 고정되어 있고(`WINDOW_W`, `WINDOW_H`), 폰트는 `맑은 고딕`(Windows 기준)이에요
 
 ## 현재 상태
-- ✅ 테스트 33개 통과 (`python -m unittest -v test_byungmat.py`): 조사, 엔딩 경계값, 장면 데이터, 난이도(랜덤 플레이 TRUE < 10%), 이벤트, 캐릭터 그림, 타이머, GUI 레이아웃
+- ✅ 테스트 34개 통과 (`python -m unittest -v test_byungmat.py`): 조사, 엔딩 경계값, 장면 데이터, 난이도(랜덤 플레이 TRUE < 10%), 이벤트, 캐릭터 그림, 타이머, GUI 레이아웃
 - ✅ `build_exe.bat`로 `dist/byungmat_love.exe` 빌드 (`images/` 폴더 포함, 테스트 실패 시 빌드 안 함)
 - 📄 기획서: `docs/기획서.md`, 인수인계: `HANDOFF.md`
 - ⏳ GitHub push 아직 안 함 (저장소 주소 받으면 진행)
@@ -24,7 +24,7 @@ python byungmat_love.py
 ## 게임 흐름
 ```
 시작 화면(상대 성별·이름 선택, 캐릭터 그림 미리보기)
-  → 장면(Chapter 1~10, 5초 타이머) → 반응 화면 → (35% 확률) 돌발 이벤트 → 다음 장면 ...
+  → 장면(Chapter 1~10, 7초 타이머) → 반응 화면 → (35% 확률) 돌발 이벤트 → 다음 장면 ...
   → 엔딩 화면 → 다시 하기 / 종료
   ※ 즉사 선택지를 고르면 반응 화면 다음에 바로 즉사 엔딩
 ```
@@ -35,7 +35,7 @@ python byungmat_love.py
 | `START_SCORE` | 10 | 시작 호감도 |
 | `TRUE_SCORE` | 100 | TRUE 엔딩 기준 |
 | `PIGEON_GOAL` | 4 | 히든 엔딩에 필요한 비둘기 게이지 |
-| `TIME_LIMIT` | 5 | 선택 제한 시간(초) |
+| `TIME_LIMIT` | 7 | 선택 제한 시간(초) |
 | `TIMEOUT_PENALTY` | -15 | 시간 초과 감점 |
 | `EVENT_CHANCE` | 0.35 | 돌발 이벤트 확률 |
 

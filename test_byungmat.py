@@ -265,6 +265,11 @@ class TestGui(unittest.TestCase):
         self.assertTrue(self.app.finished)
         self.assertIn("즉사", self.app.ending_title)
 
+    def test_제한_시간은_7초(self):
+        # 플레이해 보니 5초는 너무 빡세서 7초로 결정 (사용자 피드백)
+        self.assertEqual(game.TIME_LIMIT, 7)
+        self.assertIn("7초", game.TIMEOUT_REACTION)
+
     def test_시간_초과하면_감점(self):
         self.app.start_game()
         before = self.app.score
