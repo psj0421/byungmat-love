@@ -22,7 +22,7 @@ Python tkinter 병맛 연애 시뮬레이션 (10챕터, 지옥 난이도, 7초 �
 4. 아이디어: 엔딩 도감(json), 효과음, 타자 효과
 
 ## 주의할 점 / 알려진 문제
-- `run.bat`, `build_exe.bat`은 반드시 CRLF + ASCII (테스트가 검사). Git Bash printf로 쓰면 `>nul`이 `>/dev/null`로 바뀌는 함정 있음
+- `run.bat`, `build_exe.bat`은 반드시 CRLF + ASCII (테스트가 검사). Git Bash printf로 쓰면 `>nul`이 `>/dev/null`로 바뀌는 함정 있음. 저장소는 .gitattributes(*.bat eol=crlf)로 GitHub ZIP에서도 CRLF 유지 (ZIP 받아서 run.bat 실행까지 확인함)
 - 이모지는 tkinter에서 흑백으로 보임 (Windows Tk 한계)
 - PhotoImage는 PNG만 읽음, JPG 안 됨. 그리고 변수에 잡아두지 않으면 그림이 사라짐(`self.art_image`)
 - 다운로드한 exe가 "액세스 거부"로 안 열림 → 안랩 V3 평판 기반 실행 차단으로 추정 (V3 MeD 로그에 기록, Defender/스마트 앱 컨트롤은 무관). → 그래서 run.bat 방식으로 변경. exe를 다시 배포하려면 코드 서명이 필요
