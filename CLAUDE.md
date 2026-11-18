@@ -20,7 +20,7 @@ python byungmat_love.py
 - ✅ `build_exe.bat`로 exe 빌드 → `release/byungmat_love.exe`로 복사 (`images/` 포함, 테스트 실패 시 빌드 안 함). release/ 는 git에 커밋함
 - ✅ README는 교수님 제출용: 맨 위 "제출물 한눈에 보기" 표 + 1분 확인 가이드 + 스크린샷(`docs/screenshots/`)
 - 📄 기획서: `docs/기획서.md`, 인수인계: `HANDOFF.md`
-- ⏳ GitHub push 아직 안 함 (저장소 주소 받으면 진행)
+- ✅ GitHub: https://github.com/psj0421/byungmat-love (Public, main 브랜치)
 
 ## 게임 흐름
 ```
