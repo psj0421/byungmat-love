@@ -9,7 +9,7 @@ Python tkinter로 만든 **웃긴 게 1순위**인 선택형 연애 시뮬레이
 ![Tests](https://img.shields.io/badge/tests-34%20passed-brightgreen)
 ![Platform](https://img.shields.io/badge/platform-Windows-0078D6?logo=windows&logoColor=white)
 
-- **제출자**: AI융합소프트웨어과 1학년 (이름 / 학번)
+- **제출자**: AI융합소프트웨어과 1학년 박성재
 
 ---
 
