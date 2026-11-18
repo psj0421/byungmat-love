@@ -6,6 +6,19 @@ REM  so antivirus does not block an unsigned program.
 REM ============================================================
 cd /d "%~dp0"
 
+REM 0) run.bat alone does nothing: the game file must be next to it
+if not exist "byungmat_love.py" (
+    echo.
+    echo  [!] byungmat_love.py was not found next to run.bat.
+    echo.
+    echo      Please do not download run.bat alone.
+    echo      On the GitHub page: green "Code" button - "Download ZIP",
+    echo      unzip it, then double-click run.bat inside that folder.
+    echo.
+    pause
+    exit /b 1
+)
+
 REM 1) Python launcher (installed by the python.org installer)
 py -3 -c "import tkinter" >nul 2>nul
 if not errorlevel 1 (

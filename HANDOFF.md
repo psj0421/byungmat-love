@@ -4,9 +4,9 @@
 Python tkinter 병맛 연애 시뮬레이션 (10챕터, 지옥 난이도, 7초 타이머, 즉사 선택지, 돌발 이벤트, 캐릭터 그림) — GitHub 업로드 완료: https://github.com/psj0421/byungmat-love
 
 ## 현재 상태
-- 완료: 제출용 README(한눈에 보기 표, 스크린샷), 실행 방식을 exe → run.bat로 변경, v2 업데이트(그래픽·병맛·난이도), 테스트 37개, 기획서/README/CLAUDE.md 갱신, exe 재빌드 및 실행 확인, 로컬 커밋
+- 완료: 제출용 README(한눈에 보기 표, 스크린샷), 실행 방식을 exe → run.bat로 변경, v2 업데이트(그래픽·병맛·난이도), 테스트 38개, 기획서/README/CLAUDE.md 갱신, exe 재빌드 및 실행 확인, 로컬 커밋
 - 진행 중: 없음 (GitHub 업로드 완료, Public)
-- 테스트 현황: 37/37 통과
+- 테스트 현황: 38/38 통과
 
 ## 결정된 사항 (이유 포함)
 - 그래픽은 "PNG 있으면 PNG, 없으면 Canvas 그림" (설계안 C) — 예쁜 일러스트는 이미지가 필요하지만, 이미지가 없어도 게임이 돌아가야 해서
@@ -22,6 +22,8 @@ Python tkinter 병맛 연애 시뮬레이션 (10챕터, 지옥 난이도, 7초 �
 4. 아이디어: 엔딩 도감(json), 효과음, 타자 효과
 
 ## 주의할 점 / 알려진 문제
+- run.bat만 따로 다운받으면 게임 파일이 없어서 pythonw가 에러 없이 조용히 끝남 → run.bat 맨 앞에서 byungmat_love.py 확인 후 안내하도록 수정
+- run.bat의 if ( ) 블록 안 echo에는 괄호 쓰지 말 것 (블록이 끊김)
 - `run.bat`, `build_exe.bat`은 반드시 CRLF + ASCII (테스트가 검사). Git Bash printf로 쓰면 `>nul`이 `>/dev/null`로 바뀌는 함정 있음. 저장소는 .gitattributes(*.bat eol=crlf)로 GitHub ZIP에서도 CRLF 유지 (ZIP 받아서 run.bat 실행까지 확인함)
 - 이모지는 tkinter에서 흑백으로 보임 (Windows Tk 한계)
 - PhotoImage는 PNG만 읽음, JPG 안 됨. 그리고 변수에 잡아두지 않으면 그림이 사라짐(`self.art_image`)

@@ -222,6 +222,14 @@ class TestBatchFiles(unittest.TestCase):
     def test_Python이_없으면_설치_페이지_안내(self):
         self.assertIn(b"python.org", read_project_file("run.bat"))
 
+    def test_run_bat만_따로_받으면_ZIP_받으라고_안내(self):
+        # run.bat 하나만 다운받으면 옆에 게임 파일이 없어서 조용히 아무 일도 안 일어났다
+        data = read_project_file("run.bat")
+        self.assertIn(b'if not exist "byungmat_love.py"', data)
+        self.assertIn(b"Download ZIP", data)
+        # 게임 파일 확인이 Python 실행보다 먼저 와야 한다
+        self.assertLess(data.index(b'if not exist "byungmat_love.py"'), data.index(b"py -3"))
+
 
 class TestGui(unittest.TestCase):
     """실제 tkinter 창을 띄워서 확인 (창은 테스트 끝나면 바로 닫힘)"""

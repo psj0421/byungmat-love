@@ -6,7 +6,7 @@ Python tkinter로 만든 **웃긴 게 1순위**인 선택형 연애 시뮬레이
 
 ![Python](https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white)
 ![GUI](https://img.shields.io/badge/GUI-tkinter-ff85a2)
-![Tests](https://img.shields.io/badge/tests-37%20passed-brightgreen)
+![Tests](https://img.shields.io/badge/tests-38%20passed-brightgreen)
 ![Platform](https://img.shields.io/badge/platform-Windows-0078D6?logo=windows&logoColor=white)
 
 - **제출자**: AI융합소프트웨어과 1학년 박성재
@@ -19,7 +19,7 @@ Python tkinter로 만든 **웃긴 게 1순위**인 선택형 연애 시뮬레이
 |:---:|---|---|
 | 📄 **기획서** | [`docs/기획서.md`](docs/기획서.md) | 기획 의도, 재미 요소, 캐릭터, 챕터 구성, 엔딩 규칙, 기술 구성 |
 | 💻 **소스 코드** | [`byungmat_love.py`](byungmat_love.py) | 게임 본체 (외부 라이브러리 없음) |
-| 🧪 **테스트 코드** | [`test_byungmat.py`](test_byungmat.py) | 자동 테스트 37개 (전부 통과) |
+| 🧪 **테스트 코드** | [`test_byungmat.py`](test_byungmat.py) | 자동 테스트 38개 (전부 통과) |
 | ▶️ **실행 파일** | [`run.bat`](run.bat) | 더블클릭하면 게임 실행 (Python 필요, 백신에 막히지 않음) |
 
 ---
@@ -30,9 +30,10 @@ Python tkinter로 만든 **웃긴 게 1순위**인 선택형 연애 시뮬레이
 1. **Python 3 설치** (이미 있으면 건너뛰기): [python.org/downloads](https://www.python.org/downloads/)에서 받아 설치
    > 설치 첫 화면에서 **"Add python.exe to PATH"** 를 체크해 주세요.
 2. 이 페이지 위쪽 초록색 **`<> Code` 버튼 → `Download ZIP`** 으로 받아서 압축 풀기
+   > ⚠️ `run.bat` **하나만 따로 받으면 안 돼요.** 게임 본체(`byungmat_love.py`)가 옆에 있어야 실행돼요. 꼭 ZIP 전체를 받아 주세요.
 3. 압축 푼 폴더의 **`run.bat` 더블클릭** → 게임 창이 뜨면 끝 🎮
    > "Windows의 PC 보호" 창이 뜨면 **추가 정보 → 실행**을 누르세요.
-   > Python이 없으면 `run.bat`이 알려 주고 설치 페이지를 열어 줘요.
+   > Python이 없거나 게임 파일이 옆에 없으면 `run.bat`이 검은 창으로 무엇이 문제인지 알려 줘요.
 
 **② 명령어로 실행하기** (폴더에서 터미널을 열고)
 ```bash
@@ -43,7 +44,7 @@ python byungmat_love.py
 ```bash
 python -m unittest -v test_byungmat.py
 ```
-→ 마지막 줄에 `Ran 37 tests ... OK`가 나오면 전부 통과
+→ 마지막 줄에 `Ran 38 tests ... OK`가 나오면 전부 통과
 
 > **왜 exe가 아니라 run.bat인가요?**
 > 처음엔 PyInstaller로 만든 exe를 올렸는데, 코드 서명(유료 인증서)이 없는 exe는 **안랩 V3 같은 백신이 "액세스 거부"로 실행을 막는 문제**가 있었어요.
@@ -101,7 +102,7 @@ python -m unittest -v test_byungmat.py
 | `draw_face()`, `load_character_image()` | Canvas로 캐릭터 그리기 / `images/`의 PNG 불러오기 |
 | `LoveGame` | tkinter 화면 클래스 (시작 → 장면 → 반응 → 이벤트 → 엔딩) |
 
-**테스트 37개**가 확인하는 것: 조사 처리, 엔딩 경계값, 장면 데이터 형식, 난이도(랜덤 플레이 3000판에서 TRUE 엔딩 10% 미만), 돌발 이벤트, 캐릭터 그림, 7초 타이머, 모든 화면이 창 안에 들어가는지, `.bat` 파일 형식.
+**테스트 38개**가 확인하는 것: 조사 처리, 엔딩 경계값, 장면 데이터 형식, 난이도(랜덤 플레이 3000판에서 TRUE 엔딩 10% 미만), 돌발 이벤트, 캐릭터 그림, 7초 타이머, 모든 화면이 창 안에 들어가는지, `.bat` 파일 형식.
 
 ---
 
@@ -126,5 +127,5 @@ python -m unittest -v test_byungmat.py
 pip install pyinstaller
 build_exe.bat
 ```
-테스트 37개가 모두 통과할 때만 `dist/byungmat_love.exe`를 만듭니다.
+테스트 38개가 모두 통과할 때만 `dist/byungmat_love.exe`를 만듭니다.
 서명 없는 exe라 **다른 PC에서는 백신에 막힐 수 있어서** 저장소에는 올리지 않고, 내 PC에서만 쓰는 용도예요.

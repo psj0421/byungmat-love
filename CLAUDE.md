@@ -16,8 +16,8 @@ python byungmat_love.py
 - 창 크기는 640x680으로 고정되어 있고(`WINDOW_W`, `WINDOW_H`), 폰트는 `맑은 고딕`(Windows 기준)이에요
 
 ## 현재 상태
-- ✅ 테스트 37개 통과 (`python -m unittest -v test_byungmat.py`): 조사, 엔딩 경계값, 장면 데이터, 난이도(랜덤 플레이 TRUE < 10%), 이벤트, 캐릭터 그림, 타이머, GUI 레이아웃, bat 파일 형식
-- ✅ 배포: `run.bat` 더블클릭 → 공식 Python(`pyw`/`pythonw`)으로 `byungmat_love.py` 실행. Python이 없으면 python.org 안내
+- ✅ 테스트 38개 통과 (`python -m unittest -v test_byungmat.py`): 조사, 엔딩 경계값, 장면 데이터, 난이도(랜덤 플레이 TRUE < 10%), 이벤트, 캐릭터 그림, 타이머, GUI 레이아웃, bat 파일 형식
+- ✅ 배포: `run.bat` 더블클릭 → 공식 Python(`pyw`/`pythonw`)으로 `byungmat_love.py` 실행. Python이 없으면 python.org 안내, `byungmat_love.py`가 옆에 없으면(run.bat만 따로 받은 경우) ZIP 받으라고 안내
 - ⚠️ exe는 배포 안 함: 서명 없는 PyInstaller exe를 안랩 V3가 "액세스 거부"로 차단함. `build_exe.bat`(→ `dist/`)은 내 PC용으로만 남김
 - ✅ README는 교수님 제출용: 맨 위 "제출물 한눈에 보기" 표 + 1분 확인 가이드 + 스크린샷(`docs/screenshots/`)
 - 📄 기획서: `docs/기획서.md`, 인수인계: `HANDOFF.md`
