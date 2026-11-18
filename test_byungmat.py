@@ -209,6 +209,9 @@ class TestBatchFiles(unittest.TestCase):
                 data = read_project_file(name)
                 data.decode("ascii")  # 한글이 섞여 있으면 여기서 에러
                 self.assertEqual(data.count(b"\n"), data.count(b"\r\n"))
+                # 줄바꿈(CR, LF) 말고 눈에 안 보이는 제어문자가 섞이면 안 됨 (예: \b → 백스페이스)
+                hidden = sorted({b for b in data if b < 32 and b not in (10, 13)})
+                self.assertEqual(hidden, [])
 
     def test_run_bat은_공식_Python으로_게임을_실행(self):
         data = read_project_file("run.bat")

@@ -1,6 +1,6 @@
 @echo off
 REM (Optional) Build byungmat_love.exe for your own PC.  needs: pip install pyinstaller
-REM Output: distyungmat_love.exe
+REM Output: dist\byungmat_love.exe
 REM Note: unsigned exe files are often blocked by antivirus (e.g. V3) on other PCs.
 REM       For sharing, use run.bat instead.
 cd /d "%~dp0"
@@ -15,4 +15,4 @@ if errorlevel 1 (
 echo [2/2] Building exe...
 python -m PyInstaller --onefile --windowed --name byungmat_love --add-data "images;images" --clean -y byungmat_love.py
 if errorlevel 1 exit /b 1
-echo Done: distyungmat_love.exe
+echo Done: dist\byungmat_love.exe
