@@ -16,8 +16,9 @@ python byungmat_love.py
 - 창 크기는 640x680으로 고정되어 있고(`WINDOW_W`, `WINDOW_H`), 폰트는 `맑은 고딕`(Windows 기준)이에요
 
 ## 현재 상태
-- ✅ 테스트 34개 통과 (`python -m unittest -v test_byungmat.py`): 조사, 엔딩 경계값, 장면 데이터, 난이도(랜덤 플레이 TRUE < 10%), 이벤트, 캐릭터 그림, 타이머, GUI 레이아웃
-- ✅ `build_exe.bat`로 exe 빌드 → `release/byungmat_love.exe`로 복사 (`images/` 포함, 테스트 실패 시 빌드 안 함). release/ 는 git에 커밋함
+- ✅ 테스트 37개 통과 (`python -m unittest -v test_byungmat.py`): 조사, 엔딩 경계값, 장면 데이터, 난이도(랜덤 플레이 TRUE < 10%), 이벤트, 캐릭터 그림, 타이머, GUI 레이아웃, bat 파일 형식
+- ✅ 배포: `run.bat` 더블클릭 → 공식 Python(`pyw`/`pythonw`)으로 `byungmat_love.py` 실행. Python이 없으면 python.org 안내
+- ⚠️ exe는 배포 안 함: 서명 없는 PyInstaller exe를 안랩 V3가 "액세스 거부"로 차단함. `build_exe.bat`(→ `dist/`)은 내 PC용으로만 남김
 - ✅ README는 교수님 제출용: 맨 위 "제출물 한눈에 보기" 표 + 1분 확인 가이드 + 스크린샷(`docs/screenshots/`)
 - 📄 기획서: `docs/기획서.md`, 인수인계: `HANDOFF.md`
 - ✅ GitHub: https://github.com/psj0421/byungmat-love (Public, main 브랜치)
@@ -97,4 +98,4 @@ python byungmat_love.py
 - 대사에 이름이 들어가면 조사가 틀리지 않게 `{N이}` 같은 태그를 써 주세요
 - 외부 라이브러리는 꼭 필요할 때만 쓰고, 쓰게 되면 설치 방법을 적어 주세요
 - 1학년이 읽고 이해할 수 있게 주석은 한국어로 쉽게 달아 주세요
-- `build_exe.bat`은 CRLF + 영어로 유지 (한글/LF면 cmd가 줄을 잘못 읽음)
+- `run.bat`, `build_exe.bat`은 CRLF + 영어(ASCII)로 유지 (한글/LF면 cmd가 줄을 잘못 읽음, 테스트가 검사함). Git Bash로 쓰면 `>nul`이 `>/dev/null`로 바뀌니 Python으로 쓸 것

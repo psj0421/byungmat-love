@@ -2,7 +2,10 @@
 __pycache__/
 *.pyc
 
-# PyInstaller 빌드 결과 (exe는 GitHub Releases에 따로 올림)
+# PyInstaller 빌드 결과 (build_exe.bat, 내 PC용)
 build/
 dist/
 *.spec
+
+# exe는 백신(V3) 차단 문제로 저장소에 올리지 않음 (run.bat로 실행)
+release/

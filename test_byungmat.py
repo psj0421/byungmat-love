@@ -191,6 +191,35 @@ class TestCharacterArt(unittest.TestCase):
             root.destroy()
 
 
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+
+
+def read_project_file(name):
+    with open(os.path.join(PROJECT_DIR, name), "rb") as f:
+        return f.read()
+
+
+class TestBatchFiles(unittest.TestCase):
+    """run.bat(게임 실행)과 build_exe.bat(빌드) 파일 검사"""
+
+    def test_cmd가_읽을_수_있는_형식(self):
+        # 한글이 있거나 줄바꿈이 LF면 cmd가 줄을 잘못 읽는다 (build_exe.bat에서 겪은 문제)
+        for name in ("run.bat", "build_exe.bat"):
+            with self.subTest(file=name):
+                data = read_project_file(name)
+                data.decode("ascii")  # 한글이 섞여 있으면 여기서 에러
+                self.assertEqual(data.count(b"\n"), data.count(b"\r\n"))
+
+    def test_run_bat은_공식_Python으로_게임을_실행(self):
+        data = read_project_file("run.bat")
+        self.assertIn(b"byungmat_love.py", data)
+        self.assertNotIn(b".exe", data)          # 서명 없는 exe는 쓰지 않는다
+        self.assertIn(b"import tkinter", data)   # 진짜 Python이 있는지 확인한다
+
+    def test_Python이_없으면_설치_페이지_안내(self):
+        self.assertIn(b"python.org", read_project_file("run.bat"))
+
+
 class TestGui(unittest.TestCase):
     """실제 tkinter 창을 띄워서 확인 (창은 테스트 끝나면 바로 닫힘)"""
 
